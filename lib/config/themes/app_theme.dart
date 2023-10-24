@@ -1,6 +1,7 @@
-import 'package:clean_arch_with_ismail/core/utiles/app_colors.dart';
-import 'package:clean_arch_with_ismail/core/utiles/app_strings.dart';
-import 'package:flutter/material.dart';
+import 'package:clean_arch_with_ismail/core/utiles/app_sources/app_colors.dart';
+ import 'package:flutter/material.dart';
+
+import '../../core/utiles/app_sources/app_strings.dart';
 
 ThemeData appTheme()
 {
