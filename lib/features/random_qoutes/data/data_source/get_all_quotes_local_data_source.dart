@@ -6,3 +6,12 @@ abstract class BaseAllQuotesLocalDataSource {
   QuoteModel fetchAllQuotesInLocalDataSource();
 
 }
+
+
+class AllQuotesLocalDataSourceImplementation extends BaseAllQuotesLocalDataSource{
+  @override
+  QuoteModel fetchAllQuotesInLocalDataSource() {
+    // TODO: implement fetchAllQuotesInLocalDataSource
+    throw UnimplementedError();
+  }
+}

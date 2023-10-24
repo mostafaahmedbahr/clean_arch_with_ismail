@@ -1,7 +1,9 @@
+import 'package:bloc/bloc.dart';
 import 'package:flutter/material.dart';
 
 import 'app.dart';
 import 'core/service_locator/service_locator.dart';
+import 'core/utiles/simple_bloc_observer.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
