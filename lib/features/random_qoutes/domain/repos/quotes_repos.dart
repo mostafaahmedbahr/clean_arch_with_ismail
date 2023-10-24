@@ -3,7 +3,7 @@ import 'package:dartz/dartz.dart';
 
 import '../../../../core/errors/errors.dart';
 
-abstract class QuotesRepos{
+abstract class BaseQuotesRepos{
 
   Future<Either< Errors,  QuoteEntity>> fetchAllQuotes();
 

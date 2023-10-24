@@ -7,7 +7,7 @@ import '../repos/quotes_repos.dart';
 
 class FetchAllQuotesUseCase extends UseCaseWithNoParam<QuoteEntity>{
 
-  final QuotesRepos quotesRepos;
+  final BaseQuotesRepos quotesRepos;
 
   FetchAllQuotesUseCase({required this.quotesRepos});
 
