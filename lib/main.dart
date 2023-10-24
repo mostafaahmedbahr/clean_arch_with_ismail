@@ -5,9 +5,9 @@ import 'app.dart';
 import 'core/service_locator/service_locator.dart';
 import 'core/utiles/simple_bloc_observer.dart';
 
-void main() {
+Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  Bloc.observer = SimpleBlocObserver();
+   Bloc.observer = SimpleBlocObserver();
   ServiceLocator().setup();
   runApp(const MyQuotesApp());
 }

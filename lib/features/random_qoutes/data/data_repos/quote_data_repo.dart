@@ -6,7 +6,6 @@ import 'package:dartz/dartz.dart';
 
 import '../../../../core/errors/exception.dart';
 import '../data_source/get_all_quotes_local_data_source.dart';
-import '../models/quote_model.dart';
 
 class QuoteDataRepoImpl extends BaseQuotesRepos{
 
@@ -18,12 +17,14 @@ class QuoteDataRepoImpl extends BaseQuotesRepos{
   @override
   Future<Either<Errors, QuoteEntity>> fetchAllQuotes()  async {
     try{
+      print("QuoteDataRepoImpl");
       var  result = await baseAllQuotesRemoteDataSource.fetchAllQuotes();
-      return Right(result);
+      return right(result);
     }
-    on ServerException
-    //catch(error)
+    on ServerException catch(error)
     {
+      print(error.toString());
+      print("QuoteDataRepoImpl");
       return Left(NetworkError());
     }
 

@@ -14,14 +14,16 @@ class AllQuotesRemoteDataSourceImplementation extends BaseAllQuotesRemoteDataSou
   @override
   Future<QuoteModel> fetchAllQuotes() async {
     var response = await http.get(
-        Uri.https(EndPoint.getQuoteUrl),
+        Uri.parse(EndPoint.getQuoteUrl),
         headers: {
           "Content-Type" : "application/json",
         },
     );
     if (response.statusCode == 200) {
+      print("BaseAllQuotesRemoteDataSource");
       return QuoteModel.fromJson(json.decode(response.body));
     } else {
+      print("BaseAllQuotesRemoteDataSource");
       return throw (ServerException());
     }
   }

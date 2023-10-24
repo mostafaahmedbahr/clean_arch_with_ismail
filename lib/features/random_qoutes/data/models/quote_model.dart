@@ -5,12 +5,12 @@ class QuoteModel extends QuoteEntity {
       {required super.content,
       required super.autherName,
       required super.date,
-      required super.id});
+      });
 
   factory QuoteModel.fromJson(Map<String, dynamic> json) => QuoteModel(
       content: json['content'],
       autherName: json['author'],
       date: json['dateAdded'],
-      id: json['id'],
+
   );
 }

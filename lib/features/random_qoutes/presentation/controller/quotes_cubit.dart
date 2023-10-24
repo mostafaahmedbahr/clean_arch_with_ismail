@@ -17,14 +17,16 @@ class QuotesCubit extends Cubit<QuotesState> {
 
   Future<void>getQuotesData()async
   {
+    print("1");
     emit(GetQuotesLoadingStats());
     var result = await fetchAllQuotesUseCase.call();
     result.fold((l){
+      print("error");
       print(l.toString());
       print("error");
       emit(GetQuotesErrorStats(error: l.toString() ));
     }, (r){
-      print(r);
+      print(r.autherName);
       print("success");
       emit(GetQuotesSuccessStats(quoteEntity: r));
     });

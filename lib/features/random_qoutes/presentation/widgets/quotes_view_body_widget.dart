@@ -14,7 +14,7 @@ class QuotesViewBodyWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
-      create: (context) => QuotesCubit(fetchAllQuotesUseCase: getIt()),
+      create: (context) => QuotesCubit(fetchAllQuotesUseCase: getIt())..getQuotesData(),
       child: BlocBuilder<QuotesCubit, QuotesState>(
         builder: (context, state) {
           if (state is GetQuotesLoadingStats) {
@@ -34,7 +34,11 @@ class QuotesViewBodyWidget extends StatelessWidget {
                     content: state.quoteEntity.content,
                   ),
                   const SizedBox(height: 40,),
-                  const FloatingActionButtonWidget(),
+                    FloatingActionButtonWidget(
+                        onPressed: (){
+                          QuotesCubit.get(context).getQuotesData();
+                        },
+                    ),
                 ],
               ),
             );
