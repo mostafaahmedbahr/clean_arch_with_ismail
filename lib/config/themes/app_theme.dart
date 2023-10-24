@@ -11,6 +11,18 @@ ThemeData appTheme()
     brightness: Brightness.light,
     scaffoldBackgroundColor: AppColors.white,
     fontFamily: AppStrings.appFontName,
+    floatingActionButtonTheme: FloatingActionButtonThemeData(
+      backgroundColor: AppColors.primary,
+    ),
+    appBarTheme:   AppBarTheme(
+      titleTextStyle: TextStyle(
+        color: AppColors.primary,
+        fontSize: 20,
+      ),
+      centerTitle: true,
+      color: Colors.transparent,
+      elevation: 0,
+    ),
     textTheme: TextTheme(
       labelLarge: TextStyle(
         fontSize: 16,
