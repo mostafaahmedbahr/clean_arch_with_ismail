@@ -1,6 +1,7 @@
 import 'package:clean_arch_with_ismail/core/utiles/app_colors.dart';
 import 'package:flutter/material.dart';
 
+import 'config/themes/app_theme.dart';
 import 'core/utiles/app_strings.dart';
 import 'features/random_qoutes/presentation/views/quotes_view.dart';
 class MyQuotesApp extends StatelessWidget {
@@ -12,13 +13,8 @@ class MyQuotesApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: AppStrings.appName,
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(
-            seedColor: AppColors.primary,
-        ),
-        useMaterial3: true,
-      ),
-     home: QuotesView(),
+      theme:appTheme(),
+     home: const QuotesView(),
     );
   }
 }
