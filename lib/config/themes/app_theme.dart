@@ -1,4 +1,5 @@
 import 'package:clean_arch_with_ismail/core/utiles/app_colors.dart';
+import 'package:clean_arch_with_ismail/core/utiles/app_strings.dart';
 import 'package:flutter/material.dart';
 
 ThemeData appTheme()
@@ -8,6 +9,7 @@ ThemeData appTheme()
     hintColor: AppColors.hint,
     brightness: Brightness.light,
     scaffoldBackgroundColor: AppColors.white,
+    fontFamily: AppStrings.appFontName,
     textTheme: TextTheme(
       labelLarge: TextStyle(
         fontSize: 16,

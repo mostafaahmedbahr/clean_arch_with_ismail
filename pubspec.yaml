@@ -42,13 +42,14 @@ flutter:
   #   - images/a_dot_ham.jpeg
 
 
-  # fonts:
-  #   - family: Schyler
-  #     fonts:
-  #       - asset: fonts/Schyler-Regular.ttf
-  #       - asset: fonts/Schyler-Italic.ttf
-  #         style: italic
-  #   - family: Trajan Pro
+  fonts:
+     - family: Tajawal
+       fonts:
+         - asset: assets/fonts/Tajawal-Black.ttf
+           weight: 900
+         - asset: assets/fonts/Tajawal-Regular.ttf
+           style: italic
+           weight: 700
   #     fonts:
   #       - asset: fonts/TrajanPro.ttf
   #       - asset: fonts/TrajanPro_Bold.ttf
