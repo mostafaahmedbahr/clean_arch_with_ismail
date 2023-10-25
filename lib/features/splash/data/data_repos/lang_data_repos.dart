@@ -13,7 +13,8 @@ class LangDataReposImpl extends BaseLangRepos{
   @override
   Future<Either<Errors, bool>> changeLanguage({required String langCode}) async{
     try{
-      return Right(await baseLangLocalDataSource.changeLanguage(langCode: langCode));
+      var result = await baseLangLocalDataSource.changeLanguage(langCode: langCode);
+      return Right(result);
     }on CashedException{
       return Left(CachedError());
     }
@@ -23,7 +24,8 @@ class LangDataReposImpl extends BaseLangRepos{
   @override
   Future<Either<Errors, String>> getSavedLanguage()async {
     try{
-      return Right(await baseLangLocalDataSource.getSavedLanguage());
+      var result = await baseLangLocalDataSource.getSavedLanguage();
+      return Right(result);
     }on CashedException{
     return Left(CachedError());
     }
